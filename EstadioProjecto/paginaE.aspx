@@ -29,7 +29,7 @@
             <form runat="server">
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="/images/event.jpg" alt="Los Angeles" style="width: 100%;" />
+                        <img src="/images/event.jpg" style="width: 100%;" />
                         <div class="centered">
                             <asp:Label ID="eventNamelbl" runat="server" Text="Nombre del evento"></asp:Label>
                         </div>
@@ -40,7 +40,7 @@
                             <asp:Label ID="horariolbl" runat="server" Text="Horario del evento"></asp:Label>
                         </div>
                         <div class="bottom-right">
-                            <asp:Button ID="btn" runat="server" Text="Ver" />
+                            <asp:Button ID="btn" runat="server" Text="Comprar" Height="48px" Width="100px" />
                         </div>
                     </div>
 
