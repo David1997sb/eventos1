@@ -5,7 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <title>Borrar Evento</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -15,10 +18,10 @@
 
             </div>
             <div>
-                <asp:TextBox ID="txtNombre" placeholder="Nombre..." runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombre" CssClass="form-control"  Width="250px" placeholder="Nombre..." runat="server"></asp:TextBox>
             </div>
             <div>
-                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar Evento" />
+                <asp:Button ID="btnEliminar" CssClass="btn btn-info" runat="server" Text="Eliminar Evento" />
             </div>
         </div>
     </form>
