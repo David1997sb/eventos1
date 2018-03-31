@@ -11,28 +11,8 @@
 
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            display: block;
-            font-size: 1rem;
-            line-height: 1.25;
-            color: #495057;
-            background-color: #fff;
-            background-image: none;
-            background-clip: padding-box;
-            border-radius: .25rem;
-            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-        }
-        .auto-style2 {
-            display: block;
-            font-size: 1rem;
-            line-height: 1.25;
-            color: #495057;
-            background-color: #fff;
-            background-image: none;
-            background-clip: padding-box;
-            border-radius: .25rem;
-            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-            margin-bottom: 0;
+        .auto-style3 {
+            height: 94px;
         }
     </style>
 </head>
@@ -40,6 +20,7 @@
     <form id="form1" runat="server">
         <div>
             <div>
+                <br />
                 <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
                 <asp:TextBox ID="txtNombre" CssClass="form-control"  Width="250px" placeholder="Nombre..." runat="server"></asp:TextBox>
             </div>
@@ -55,7 +36,7 @@
                 <asp:Label ID="lblHorario" runat="server" Text="Horario"></asp:Label>
                 <asp:TextBox ID="txtHorario" CssClass="form-control" Width="250px" placeholder="Horario..." runat="server"></asp:TextBox>
             </div>
-            <div>
+            <div class="auto-style3">
                 <asp:Label ID="lblCliente" runat="server" Text="Cliente"></asp:Label>
                 <asp:TextBox ID="txtCiente" CssClass="form-control" Width="250px" placeholder="Cliente..." runat="server"></asp:TextBox>
             </div>

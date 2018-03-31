@@ -9,15 +9,21 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <title>Borrar Evento</title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 55px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <div>
+                <br />
                 <asp:Label ID="lblNombre" runat="server" Text="Digite el nombre del Evento a eliminar"></asp:Label>
 
             </div>
-            <div>
+            <div class="auto-style1">
                 <asp:TextBox ID="txtNombre" CssClass="form-control"  Width="250px" placeholder="Nombre..." runat="server"></asp:TextBox>
             </div>
             <div>
