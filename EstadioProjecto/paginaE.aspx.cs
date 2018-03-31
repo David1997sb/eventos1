@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.ServiceModel.Channels;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-public partial class paginaEventos : System.Web.UI.Page
+public partial class paginaE : System.Web.UI.Page
 {
     SqlConnection conn = new SqlConnection();
     String sql;
     SqlCommand com;
     SqlDataReader reader;
-    
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        conn =  databaseConnection("ADRIAN\\MSSQLSRVER", "stadium_table", "colochos", "amartinez");
-        string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
+        conn = databaseConnection("ADRIAN\\MSSQLSRVER", "stadium_table", "colochos", "amartinez");
+        string nombreEvento = selectWhereFromDbInfo("nombre_evento", "evento", "id_evento", "3");
         eventNamelbl.Text = nombreEvento;
-        string horarioEvento =selectWhereFromDbInfo("horario", "evento", "id_evento","3");
+        string horarioEvento = selectWhereFromDbInfo("horario", "evento", "id_evento", "3");
         horariolbl.Text = horarioEvento;
         string descEvento = selectWhereFromDbInfo("descripcion", "evento", "id_evento", "3");
         desclbl.Text = descEvento;
@@ -68,5 +66,4 @@ public partial class paginaEventos : System.Web.UI.Page
     //      </div>
     //  </div>");
     //}
-
 }
