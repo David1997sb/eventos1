@@ -101,6 +101,11 @@ public partial class paginaEventos : System.Web.UI.Page
         return conn;
     }
     
+    public void generateIndicators()
+    {
+
+    }
+
     public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
     {
 
@@ -120,13 +125,5 @@ public partial class paginaEventos : System.Web.UI.Page
             HTML += "<div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span>" + "</div>";
             HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>" + "</div>";
         }
-
-        /* html.Append("<div class=" + "carousel - inner" + ">"+"< div class=" + "carousel-item active" + ">" +"<div class=" + "container" + ">");
-         html.Append("<img class=" + "d-block w-100" + "src=" + "http://tueventoenbogota.com/wp-content/uploads/2015/07/01_eventos_empresariales-1240x824.jpg" + "/>");
-         html.Append("< div class=" + "centered" + ">"+"<asp:Label ID = " + eventNamelbl + " runat=" + "server" + "Text" + "=" + "Nombre del evento" + ">" + "</asp:Label>" +"</div>");
-         html.Append("<div class=" + "middle-left>"+"<asp:Label ID = " + desclbl + "runat= " + "server" + "Text=" + "Descripcion del evento>" + "</asp:Label>"+"</div>");
-         html.Append("<div class=" + "bottom-left>" +"<asp:Label ID = " + horariolbl + "runat=" + "server" + "Text=" + "Horario del evento>" + "</asp:Label>" +"</div>" +"</div>");*/
     }
-
-
 }
