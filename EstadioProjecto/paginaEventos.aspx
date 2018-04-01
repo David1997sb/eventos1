@@ -12,34 +12,24 @@
     <link href="css/peventos.css" rel="stylesheet" />
 </head>
 <body runat="server">
-    <div id="carouselControls" class="carousel slide" data-ride="carousel" runat="server">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <img class="d-block w-100" src="http://tueventoenbogota.com/wp-content/uploads/2015/07/01_eventos_empresariales-1240x824.jpg" />
-                    <div class="centered">
-                        <asp:Label ID="eventNamelbl" runat="server" Text="Nombre del evento"></asp:Label>
-                    </div>
-                    <div class="middle-left">
-                        <asp:Label ID="desclbl" runat="server" Text="Descripcion del evento"></asp:Label>
-                    </div>
-                    <div class="bottom-left">
-                        <asp:Label ID="horariolbl" runat="server" Text="Horario del evento"></asp:Label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <div>
-    </div>
+<div  class="carousel slide" data-ride="carousel" >
+  <div class="carousel-inner" runat="server">
+   <div id="carouselControls" class="carousel-item active" runat="server">
 
+   </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
+ 
+</div>
 </body>
 </html>
