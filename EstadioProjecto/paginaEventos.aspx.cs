@@ -19,11 +19,10 @@ public partial class paginaEventos : System.Web.UI.Page
     string HTML = "";
     StringBuilder html = new StringBuilder();
 
-
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        conn =  databaseConnection("DESKTOP-U5BLV9M\\SQLEXPRESS", "stadium_table", "dsalas", "salasbar97");
+        conn = databaseConnection("DESKTOP-U5BLV9M\\SQLEXPRESS", "stadium_table", "dsalas", "salasbar97");
         /*string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
         eventNamelbl.Text = nombreEvento;
         string horarioEvento =selectWhereFromDbInfo("horario", "evento", "id_evento","3");
@@ -31,11 +30,14 @@ public partial class paginaEventos : System.Web.UI.Page
         string descEvento = selectWhereFromDbInfo("descripcion", "evento", "id_evento", "3");
         desclbl.Text = descEvento;*/
         //countTables("evento");
+        carouselIndicatorsHtml();
         insertPageInfo();
     }
 
     public void insertPageInfo()
     {
+        int numberOfRows = countTables("event");
+
         /*
          string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
 
@@ -45,14 +47,13 @@ public partial class paginaEventos : System.Web.UI.Page
         string descEvento = selectWhereFromDbInfo("descripcion", "evento", "id_evento", "3");
         desclbl.Text = descEvento;
          */
-        int numberOfRows = countTables("event");
         int tableId = 2;
-        for(int i=0; i <= numberOfRows; i++)
-        { 
+        for (int i = 0; i <= numberOfRows; i++)
+        {
             string nombreEvento = selectWhereFromDbInfo("nombre_evento", "evento", "id_evento", tableId);
             string horarioEvento = selectWhereFromDbInfo("horario", "evento", "id_evento", tableId);
             string descEvento = selectWhereFromDbInfo("descripcion", "evento", "id_evento", tableId);
-            insertCarouselHtml("namelbl" + i.ToString(), "desclbl" + i.ToString(), "horariolbl" + i.ToString(),descEvento,nombreEvento,horarioEvento,i);
+            insertCarouselHtml("namelbl" + i.ToString(), "desclbl" + i.ToString(), "horariolbl" + i.ToString(), "eventobtn" + i.ToString(), descEvento, nombreEvento, horarioEvento, i);
             tableId++;
         }
         carouselControls.InnerHtml += HTML;
@@ -74,7 +75,7 @@ public partial class paginaEventos : System.Web.UI.Page
         conn.Close();
         return numberRows;
 
-       
+
     }
     public string selectWhereFromDbInfo(string columnName, string tableName, string whereId, int equalsStatement)
     {
@@ -100,30 +101,40 @@ public partial class paginaEventos : System.Web.UI.Page
         "Password=" + password + ";";
         return conn;
     }
-    
-    public void generateIndicators()
-    {
 
+    public void carouselIndicatorsHtml()
+    {
+        int numberOfRows = countTables("event");
+
+        string indicatorHtml = "";
+        for (int i = 0; i <= numberOfRows; i++)
+        {
+            indicatorHtml += " <li data-target=" + "#myCarousel" + " data-slide-to=" + i++ + "></li>";
+        }
+        carouselIndicators.InnerHtml += indicatorHtml;
     }
 
-    public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
+    public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string eventobtn, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
     {
 
         if (flag == 0)
         {
 
-            HTML += "<img class=" + "d-block w-100" + " src=" + "http://tueventoenbogota.com/wp-content/uploads/2015/07/01_eventos_empresariales-1240x824.jpg" + ">";
-            HTML += "<div class=" + "'centered'" + ">" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span>" + "</div>";
-            HTML += "<div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span>" + "</div>";
-            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>" + "</div>";
+            HTML += "<img src=" + "/images/event.jpg" + " style = " + " width: 100%;" + "/>";
+            HTML += " <div class=" + "centered>" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span></div>";
+            HTML += " <div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span></div>";
+            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>";
+            HTML += "<input type=" + " submit" + " name= " + eventobtn + " value= Comprar " + "id=" + eventobtn + "style= height: 48px; width: 100px > " + "</div>";
 
         }
         else
         {
-            HTML += "<div class=" + "carousel-item>" + "<img class=" + "d-block w-100" + " src=" + "http://tueventoenbogota.com/wp-content/uploads/2015/07/01_eventos_empresariales-1240x824.jpg" + ">";
-            HTML += "<div class=" + "'centered'" + ">" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span>" + "</div>";
-            HTML += "<div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span>" + "</div>";
-            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>" + "</div>";
+            HTML += "<div class=" + "item" + ">" + "<img src=" + "/images/event.jpg" + " style = " + " width: 100%;" + "/>";
+            HTML += " <div class=" + "centered>" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span></div>";
+            HTML += " <div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span></div>";
+            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>";
+            HTML += "<input type=" + " submit" + " name= " + eventobtn + " value= Comprar " + "id=" + eventobtn + "style= height: 48px; width: 100px > " + "</div>";
+
         }
     }
 }
