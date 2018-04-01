@@ -22,6 +22,7 @@ public partial class paginaEventos : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+
         conn =  databaseConnection("DESKTOP-U5BLV9M\\SQLEXPRESS", "stadium_table", "dsalas", "salasbar97");
         /*string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
         eventNamelbl.Text = nombreEvento;
@@ -37,6 +38,7 @@ public partial class paginaEventos : System.Web.UI.Page
     {
         /*
          string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
+
         eventNamelbl.Text = nombreEvento;
         string horarioEvento =selectWhereFromDbInfo("horario", "evento", "id_evento","3");
         horariolbl.Text = horarioEvento;
@@ -98,7 +100,7 @@ public partial class paginaEventos : System.Web.UI.Page
         "Password=" + password + ";";
         return conn;
     }
-
+    
     public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
     {
 
@@ -125,5 +127,6 @@ public partial class paginaEventos : System.Web.UI.Page
          html.Append("<div class=" + "middle-left>"+"<asp:Label ID = " + desclbl + "runat= " + "server" + "Text=" + "Descripcion del evento>" + "</asp:Label>"+"</div>");
          html.Append("<div class=" + "bottom-left>" +"<asp:Label ID = " + horariolbl + "runat=" + "server" + "Text=" + "Horario del evento>" + "</asp:Label>" +"</div>" +"</div>");*/
     }
+
 
 }
