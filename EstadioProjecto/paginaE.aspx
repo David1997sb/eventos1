@@ -19,38 +19,15 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+            <ol id="carouselIndicators" class="carousel-indicators" runat="server">
+                
             </ol>
 
             <!-- Wrapper for slides -->
             <form runat="server">
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="/images/event.jpg" style="width: 100%;" />
-                        <div class="centered">
-                            <asp:Label ID="eventNamelbl" runat="server" Text="Nombre del evento"></asp:Label>
-                        </div>
-                        <div class="middle-left">
-                            <asp:Label ID="desclbl" runat="server" Text="Descripcion del evento"></asp:Label>
-                        </div>
-                        <div class="bottom-left">
-                            <asp:Label ID="horariolbl" runat="server" Text="Horario del evento"></asp:Label>
-                        </div>
-                        <div class="bottom-right">
-                            <asp:Button ID="btn" runat="server" Text="Comprar" Height="48px" Width="100px" />
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="/Slider/2.jpg" alt="Chicago" style="width: 100%;" />
-                    </div>
-
-                    <div class="item">
-                        <img src="/Slider/3.jpg" alt="New york" style="width: 100%;" />
-                    </div>
+                <div class="carousel-inner" >
+                    <div  id="carouselControls" class= "item active" runat="server">
+                      </div>
                 </div>
             </form>
             <!-- Left and right controls -->
@@ -63,6 +40,5 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
 </body>
 </html>
