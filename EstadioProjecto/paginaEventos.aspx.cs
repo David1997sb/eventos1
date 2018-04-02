@@ -100,7 +100,7 @@ public partial class paginaEventos : System.Web.UI.Page
         "Password=" + password + ";";
         return conn;
     }
-<<<<<<< HEAD
+// HEAD
     
     public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
     {
@@ -128,7 +128,7 @@ public partial class paginaEventos : System.Web.UI.Page
          html.Append("<div class=" + "middle-left>"+"<asp:Label ID = " + desclbl + "runat= " + "server" + "Text=" + "Descripcion del evento>" + "</asp:Label>"+"</div>");
          html.Append("<div class=" + "bottom-left>" +"<asp:Label ID = " + horariolbl + "runat=" + "server" + "Text=" + "Horario del evento>" + "</asp:Label>" +"</div>" +"</div>");*/
     }
-=======
+
 
     //public void innerCarouselHtml()
     //{
@@ -147,7 +147,7 @@ public partial class paginaEventos : System.Web.UI.Page
     //   </div>
     // </div>");
     //}
->>>>>>> Kevin
+
 
 
 }
