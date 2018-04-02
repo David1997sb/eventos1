@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="paginaEventos.aspx.cs" Inherits="paginaEventos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="paginaE.aspx.cs" Inherits="paginaE" %>
 
 <!DOCTYPE html>
 
