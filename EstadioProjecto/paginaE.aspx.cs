@@ -2,22 +2,18 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.ServiceModel.Channels;
-using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-public partial class paginaEventos : System.Web.UI.Page
+public partial class paginaE : System.Web.UI.Page
 {
     SqlConnection conn = new SqlConnection();
     String sql;
     SqlCommand com;
     SqlDataReader reader;
-    string imageSrc = "";
     string HTML = "";
-    StringBuilder html = new StringBuilder();
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -102,25 +98,6 @@ public partial class paginaEventos : System.Web.UI.Page
         return conn;
     }
 
-<<<<<<< HEAD
-    //public void innerCarouselHtml()
-    //{
-    //carouselControls.InnerHtml = ("<div class=" +"carousel - inner" + ">"
-    // "< div class=" + "carousel-item active"+">"
-    //   "<div class="+"container"+">" 
-    //     "<img class=" + "d-block w-100" + "src=" + "http://tueventoenbogota.com/wp-content/uploads/2015/07/01_eventos_empresariales-1240x824.jpg" + "/>"
-    //   "<div class=" + "centered" + ">"
-    //     "<asp:Label ID = " + "eventNamelbl" + "runat=" + "server" Text="Nombre del evento"></asp:Label>
-    //  </div>
-    //  <div class="middle-left">
-    //     <asp:Label ID = "desclbl" runat="server" Text="Descripcion del evento"></asp:Label>
-    //  </div>
-    //  <div class="bottom-left">
-    //     <asp:Label ID = "horariolbl" runat="server" Text="Horario del evento"></asp:Label>
-    //   </div>
-    // </div>");
-    //}
-=======
     public void carouselIndicatorsHtml()
     {
         int numberOfRows = countTables("event");
@@ -132,9 +109,8 @@ public partial class paginaEventos : System.Web.UI.Page
         }
         carouselIndicators.InnerHtml += indicatorHtml;
     }
->>>>>>> master
 
-    public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string eventobtn, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
+    public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl,string eventobtn, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
     {
 
         if (flag == 0)
@@ -144,7 +120,7 @@ public partial class paginaEventos : System.Web.UI.Page
             HTML += " <div class=" + "centered>" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span></div>";
             HTML += " <div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span></div>";
             HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>";
-            HTML += "<input type=" + " submit" + " name= " + eventobtn + " value= Comprar " + "id=" + eventobtn + "style= height: 48px; width: 100px > " + "</div>";
+            HTML += "<input type=" + " submit" + " name= " + eventobtn + " value= Comprar "  +  "id=" +eventobtn + "style= height: 48px; width: 100px > "+ "</div>";
 
         }
         else
