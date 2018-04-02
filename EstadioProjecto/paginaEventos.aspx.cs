@@ -23,13 +23,6 @@ public partial class paginaEventos : System.Web.UI.Page
     {
 
         conn = databaseConnection("DESKTOP-U5BLV9M\\SQLEXPRESS", "stadium_table", "dsalas", "salasbar97");
-        /*string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
-        eventNamelbl.Text = nombreEvento;
-        string horarioEvento =selectWhereFromDbInfo("horario", "evento", "id_evento","3");
-        horariolbl.Text = horarioEvento;
-        string descEvento = selectWhereFromDbInfo("descripcion", "evento", "id_evento", "3");
-        desclbl.Text = descEvento;*/
-        //countTables("evento");
         carouselIndicatorsHtml();
         insertPageInfo();
     }
@@ -37,16 +30,6 @@ public partial class paginaEventos : System.Web.UI.Page
     public void insertPageInfo()
     {
         int numberOfRows = countTables("event");
-
-        /*
-         string nombreEvento=selectWhereFromDbInfo("nombre_evento", "evento", "id_evento","3");
-
-        eventNamelbl.Text = nombreEvento;
-        string horarioEvento =selectWhereFromDbInfo("horario", "evento", "id_evento","3");
-        horariolbl.Text = horarioEvento;
-        string descEvento = selectWhereFromDbInfo("descripcion", "evento", "id_evento", "3");
-        desclbl.Text = descEvento;
-         */
         int tableId = 2;
         for (int i = 0; i <= numberOfRows; i++)
         {
@@ -101,26 +84,7 @@ public partial class paginaEventos : System.Web.UI.Page
         "Password=" + password + ";";
         return conn;
     }
-
-<<<<<<< HEAD
-    //public void innerCarouselHtml()
-    //{
-    //carouselControls.InnerHtml = ("<div class=" +"carousel - inner" + ">"
-    // "< div class=" + "carousel-item active"+">"
-    //   "<div class="+"container"+">" 
-    //     "<img class=" + "d-block w-100" + "src=" + "http://tueventoenbogota.com/wp-content/uploads/2015/07/01_eventos_empresariales-1240x824.jpg" + "/>"
-    //   "<div class=" + "centered" + ">"
-    //     "<asp:Label ID = " + "eventNamelbl" + "runat=" + "server" Text="Nombre del evento"></asp:Label>
-    //  </div>
-    //  <div class="middle-left">
-    //     <asp:Label ID = "desclbl" runat="server" Text="Descripcion del evento"></asp:Label>
-    //  </div>
-    //  <div class="bottom-left">
-    //     <asp:Label ID = "horariolbl" runat="server" Text="Horario del evento"></asp:Label>
-    //   </div>
-    // </div>");
-    //}
-=======
+    
     public void carouselIndicatorsHtml()
     {
         int numberOfRows = countTables("event");
@@ -132,7 +96,7 @@ public partial class paginaEventos : System.Web.UI.Page
         }
         carouselIndicators.InnerHtml += indicatorHtml;
     }
->>>>>>> master
+
 
     public void insertCarouselHtml(string eventNamelbl, string desclbl, string horariolbl, string eventobtn, string descripcionEvento, string nombreEvento, string horarioEvento, int flag)
     {
