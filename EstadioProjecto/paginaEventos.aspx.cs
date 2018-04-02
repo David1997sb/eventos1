@@ -88,11 +88,20 @@ public partial class paginaEventos : System.Web.UI.Page
     public void carouselIndicatorsHtml()
     {
         int numberOfRows = countTables("event");
-
+        numberOfRows++;
         string indicatorHtml = "";
         for (int i = 0; i <= numberOfRows; i++)
         {
-            indicatorHtml += " <li data-target=" + "#myCarousel" + " data-slide-to=" + i++ + "></li>";
+            if (i == 0)
+            {
+                indicatorHtml += " <li data-target=" + "#myCarousel" + " data-slide-to=" + i++ + " class=active" + "></li>";
+
+            }
+            else
+            {
+                indicatorHtml += " <li data-target=" + "#myCarousel" + " data-slide-to=" + i++ + "></li>";
+
+            }
         }
         carouselIndicators.InnerHtml += indicatorHtml;
     }
@@ -102,23 +111,52 @@ public partial class paginaEventos : System.Web.UI.Page
     {
 
         if (flag == 0)
-        {
-
+        { 
+            
             HTML += "<img src=" + "/images/event.jpg" + " style = " + " width: 100%;" + "/>";
             HTML += " <div class=" + "centered>" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span></div>";
             HTML += " <div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span></div>";
-            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>";
-            HTML += "<input type=" + " submit" + " name= " + eventobtn + " value= Comprar " + "id=" + eventobtn + "style= height: 48px; width: 100px > " + "</div>";
-
+            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>" + "</div>";
+           
         }
         else
         {
-            HTML += "<div class=" + "item" + ">" + "<img src=" + "/images/event.jpg" + " style = " + " width: 100%;" + "/>";
+            HTML += "<div class=" + "item" + " runat = server" + ">" + "<img src=" + "/images/event.jpg" + " style = " + " width: 100%;" + "/>";
             HTML += " <div class=" + "centered>" + "<span ID = " + eventNamelbl + ">" + nombreEvento + "</span></div>";
             HTML += " <div class=" + "middle-left>" + "<span ID = " + desclbl + ">" + descripcionEvento + "</span></div>";
-            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>";
-            HTML += "<input type=" + " submit" + " name= " + eventobtn + " value= Comprar " + "id=" + eventobtn + "style= height: 48px; width: 100px > " + "</div>";
-
+            HTML += "<div class=" + "bottom-left>" + "<span ID = " + horariolbl + ">" + horarioEvento + "</span>" + "</div>" + "</div>";
         }
     }
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        int numberOfRows = countTables("event");
+        numberOfRows++;
+        string htmlElement = "namelbl";
+        for (int i = 0; i <= numberOfRows; i++)
+        {
+           // HtmlDocument doc = webBrowser1.Document;
+            //var links = carouselControls.Document.GetElementsByTagName("a");
+            Control myControl1 = FindControl(htmlElement + i.ToString());
+            htmlElement = myControl1.ToString();
+            if (htmlElement.Contains("active"))
+            {
+                conn.Open();
+                sql = "SELECT id_evento  FROM evento WHERE nombre_evento = " + htmlElement;
+                com = conn.CreateCommand();
+                com.CommandText = sql;
+                reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    Session["eventId"]= (int)reader[0];
+                }
+                conn.Close();
+            }
+
+        }
+
+    }
+
+
 }

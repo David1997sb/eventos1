@@ -28,6 +28,9 @@
                 <div class="carousel-inner" >
                     <div  id="carouselControls" class= "item active" runat="server">
                       </div>
+                    <div class="bottom-right">
+                            <asp:Button ID="btn" runat="server" Text="Ver" OnClick="Button1_Click"/>
+                        </div>
                 </div>
             </form>
             <!-- Left and right controls -->
