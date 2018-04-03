@@ -84,7 +84,7 @@ public partial class paginaEventos : System.Web.UI.Page
         "Password=" + password + ";";
         return conn;
     }
-    
+   
     public void carouselIndicatorsHtml()
     {
         int numberOfRows = countTables("event");
@@ -157,6 +157,4 @@ public partial class paginaEventos : System.Web.UI.Page
         }
 
     }
-
-
 }

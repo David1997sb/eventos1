@@ -78,7 +78,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
         <p>
-            <asp:Button ID="btnback" runat="server" OnClick="btnback_Click" Text="Volver" Width="126px" Height="24px" />
+            <asp:Button ID="btnback" runat="server" Text="Volver" Width="126px" Height="24px" />
         &nbsp;&nbsp;
         </p>
         <p>
