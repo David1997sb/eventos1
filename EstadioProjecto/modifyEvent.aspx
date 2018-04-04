@@ -55,11 +55,18 @@
             margin-left: 33
         }
         .auto-style16 {
-            width: 749px;
-            height: 208px;
+            width: 997px;
+            height: 344px;
         }
         .auto-style17 {
             color: #fff;
+            font-size: x-large;
+        }
+        .auto-style18 {
+            height: 1439px;
+        }
+        .auto-style19 {
+            color: #000000;
             font-size: x-large;
         }
         </style>
@@ -81,7 +88,7 @@
                     </div>
         </nav>
         <div class="limiter">
-        <div class="container-login100" style="background-image: url('images/backround.jpg'); background-position: 50% 50%; background-attachment: fixed; background-repeat:no-repeat; background-size: cover;">
+        <div class="auto-style18" style="background-image: url('images/backround.jpg'); background-position: 50% 50%; background-attachment: fixed; background-repeat:no-repeat; background-size: cover;">
                 
                 <br />
                 <br />
@@ -177,14 +184,14 @@
                     </tr>
                 </table>
                 <br />
-                </form>
+                <br />
                 <br />
                 <br />
                 <br />
                 <table align="center" class="auto-style16">
                     <tr>
                         <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px" CssClass="auto-style19" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="id_evento" HeaderText="id_evento" InsertVisible="False" ReadOnly="True" SortExpression="id_evento" />
                 <asp:BoundField DataField="actor" HeaderText="actor" SortExpression="actor" />
@@ -198,17 +205,9 @@
                             &nbsp;</td>
                     </tr>
         </table>
-                <br />      
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                </form>
+        <br />
+        <br />
                 <br />
                 <br />
                 <br />
