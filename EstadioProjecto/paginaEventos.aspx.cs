@@ -198,20 +198,23 @@ public partial class paginaEventos : System.Web.UI.Page
 
     }
 
-    
-    protected void Button1_Click1(object sender, EventArgs e)
+    public void entra()
     {
-        if (RadioButton1.Checked == true)
-        {
-            Session["nombre"] = "1";
-        }
-        else if (RadioButton2.Checked == true)
-        {
-            Session["nombre"] = "2";
-        }
-        else
-        {
-            Session["nombre"] = "3";
-        }
+        if (DropDownList1.SelectedValue == "1")
+        { Session["nombre"] = "1"; }
+
+        if (DropDownList1.SelectedValue == "2")
+        { Session["nombre"] = "2"; }
+
+        if (DropDownList1.SelectedValue == "3")
+        { Session["nombre"] = "3"; }
+
+    }
+
+    protected void btncomprar_Click(object sender, EventArgs e)
+    {
+        entra();
+        Session["EventoEle"] = DropDownList2.SelectedValue;
+        Response.Redirect("asientos.aspx");
     }
 }

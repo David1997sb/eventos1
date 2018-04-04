@@ -191,7 +191,7 @@
                 <table align="center" class="auto-style16">
                     <tr>
                         <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px" CssClass="auto-style19" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px" CssClass="auto-style19">
             <Columns>
                 <asp:BoundField DataField="id_evento" HeaderText="id_evento" InsertVisible="False" ReadOnly="True" SortExpression="id_evento" />
                 <asp:BoundField DataField="actor" HeaderText="actor" SortExpression="actor" />
@@ -202,6 +202,7 @@
                 <asp:BoundField DataField="entrada_vip" HeaderText="entrada_vip" SortExpression="entrada_vip" />
             </Columns>
         </asp:GridView>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:stadium_tableConnectionString %>" SelectCommand="SELECT * FROM [evento]"></asp:SqlDataSource>
                             &nbsp;</td>
                     </tr>
         </table>

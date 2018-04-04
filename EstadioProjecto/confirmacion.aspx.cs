@@ -11,7 +11,10 @@ public partial class confirmacion : System.Web.UI.Page
     SqlConnection con = new SqlConnection();
     protected void Page_Load(object sender, EventArgs e)
     {
-        con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\estadio.mdf;Integrated Security=True;";
+        con.ConnectionString = "Data Source=DESKTOP-U5BLV9M\\SQLEXPRESS;" +
+        "Initial Catalog=user_table;" +
+        "User id=dsalas;" +
+        "Password=salasbar97;";
         //******************************* Despliega artista***************************************//
         con.Open();
         SqlCommand vip = new SqlCommand(String.Format("Select actor,horario,nombre_evento from evento where id_evento = '{0}' ", Session["EventoEle"]), con);
