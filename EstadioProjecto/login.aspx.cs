@@ -45,10 +45,7 @@ public partial class _Default : System.Web.UI.Page
             if (value.Equals("admin"))
             {
                 var userRols = Session["admin"];
-                //Response.Redirect("modifyEvent.aspx");
-                Response.Redirect("paginaEventos.aspx");
-
-
+                Response.Redirect("modifyEvent.aspx");
             }
             else
             {
