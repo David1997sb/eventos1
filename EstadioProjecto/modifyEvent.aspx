@@ -65,10 +65,6 @@
         .auto-style18 {
             height: 1439px;
         }
-        .auto-style19 {
-            color: #000000;
-            font-size: x-large;
-        }
         </style>
 </head>
 <body>
@@ -191,7 +187,7 @@
                 <table align="center" class="auto-style16">
                     <tr>
                         <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px" CssClass="auto-style19">
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px" CssClass="auto-style17">
             <Columns>
                 <asp:BoundField DataField="id_evento" HeaderText="id_evento" InsertVisible="False" ReadOnly="True" SortExpression="id_evento" />
                 <asp:BoundField DataField="actor" HeaderText="actor" SortExpression="actor" />

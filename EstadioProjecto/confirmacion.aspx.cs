@@ -12,7 +12,7 @@ public partial class confirmacion : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         con.ConnectionString = "Data Source=DESKTOP-U5BLV9M\\SQLEXPRESS;" +
-        "Initial Catalog=user_table;" +
+        "Initial Catalog=stadium_table;" +
         "User id=dsalas;" +
         "Password=salasbar97;";
         //******************************* Despliega artista***************************************//

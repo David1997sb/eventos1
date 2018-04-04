@@ -20,7 +20,7 @@ public partial class index : System.Web.UI.Page
         
         lblcantEntra.Text = Session["nombre"].ToString(); //despliega cantidad de entradas por comprar
         con.ConnectionString = "Data Source=DESKTOP-U5BLV9M\\SQLEXPRESS;" +
-        "Initial Catalog=user_table;" +
+        "Initial Catalog=stadium_table;" +
         "User id=dsalas;" +
         "Password=salasbar97;"; //conexion a la base de datos
 

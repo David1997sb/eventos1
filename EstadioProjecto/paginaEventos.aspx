@@ -33,18 +33,8 @@
                 </div>
            
             </div>
-        
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-      <p class="bottom-centered">
+        <div class="bottom-centered">
+            <p>
             Cantidad de Entradas
             <asp:DropDownList ID="DropDownList1" runat="server" Height="28px" Width="116px">
                 <asp:ListItem>1</asp:ListItem>
@@ -59,8 +49,21 @@
             </asp:DropDownList>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:stadium_tableConnectionString %>" SelectCommand="SELECT [id_evento], [nombre_evento] FROM [evento]"></asp:SqlDataSource>
         </p>
-        <asp:Button ID="btncomprar" runat="server" OnClick="btncomprar_Click" Text="Elegir Asientos" Width="166px" />
+        <asp:Button ID="btncomprar" runat="server" OnClick="btncomprar_Click" Text="Elegir Asientos" Height="28px" Width="1160px" />
         <br />
+        </div>
+        
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+      
     </form>
 </body>
 </html>
