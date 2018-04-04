@@ -45,10 +45,15 @@ public partial class _Default : System.Web.UI.Page
             if (value.Equals("admin"))
             {
                 var userRols = Session["admin"];
+                //Response.Redirect("modifyEvent.aspx");
+                Response.Redirect("paginaEventos.aspx");
+
+
             }
             else
             {
                 var userRols = Session["normal"];
+                Response.Redirect("paginaEventos.aspx");
             }
         }
     }
