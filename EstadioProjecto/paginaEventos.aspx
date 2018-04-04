@@ -13,6 +13,8 @@
     <link href="css/peventos.css" rel="stylesheet" />
 </head>
 <body>
+            <form runat="server">
+
     <h2>Eventos</h2>
     <div class="container">
 
@@ -24,15 +26,14 @@
             </ol>
 
             <!-- Wrapper for slides -->
-            <form runat="server">
                 <div class="carousel-inner" >
                     <div  id="carouselControls" class= "item active" runat="server">
+
                       </div>
-                    <div class="bottom-right">
-                            <asp:Button ID="btn" runat="server" Text="Ver" OnClick="Button1_Click"/>
-                        </div>
                 </div>
-            </form>
+           
+            </div>
+        
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -43,5 +44,13 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+       <div class="bottom-centered">
+        <asp:RadioButton ID="RadioButton1" runat="server" class="bottom-centered" Text="Evento 1"/>
+        <asp:RadioButton ID="RadioButton2" runat="server" class="bottom-centered" Text="Evento 2"/>
+        <asp:RadioButton ID="RadioButton3" runat="server" class="bottom-centered" Text="Evento 3"/>
+         <asp:Button ID="Button1" runat="server" Text="Comprar entradas" OnClick="Button1_Click1"/>
+
+        </div>
+    </form>
 </body>
 </html>

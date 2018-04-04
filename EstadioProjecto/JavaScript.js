@@ -1,3 +1,6 @@
 ﻿function find() {
-    document.getElementsByClassName("item-active");
+    var eventActive = document.getElementsByClassName("item-active");
+    sessionStorage.SessionName = "eventActive";
+    sessionStorage.getItem("eventActive");
+    sessionStorage.setItem("SessionName", "SessionData");
 }
