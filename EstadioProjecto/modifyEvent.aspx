@@ -4,113 +4,183 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 100%;
+            width: 1017px;
+            height: 695px;
         }
         .auto-style2 {
-            width: 159px;
+            text-align: right;
+            width: 345px;
+            font-size: large;
         }
         .auto-style3 {
-            width: 159px;
-            height: 26px;
-        }
-        .auto-style4 {
-            height: 26px;
-        }
-        .auto-style5 {
-            width: 342px;
-        }
-        .auto-style6 {
-            height: 26px;
-            width: 176px;
+            text-align: center;
+            width: 272px;
         }
         .auto-style7 {
-            width: 176px;
-        }
-        .auto-style8 {
-            height: 26px;
-            width: 108px;
+            text-align: left;
+            width: 410px;
+            font-size: large;
         }
         .auto-style9 {
-            width: 108px;
+            text-align: center;
+            width: 410px;
+            font-size: large;
+            height: 120px;
         }
-    </style>
+        .auto-style10 {
+            text-align: right;
+            width: 345px;
+            font-size: large;
+            height: 120px;
+        }
+        .auto-style11 {
+            text-align: center;
+            width: 272px;
+            height: 120px;
+        }
+        .auto-style12 {
+            text-align: center;
+            height: 120px;
+            width: 13px;
+        }
+        .auto-style14 {
+            text-align: center;
+            width: 13px;
+        }
+        .auto-style15 {
+            margin-left: 33
+        }
+        .auto-style16 {
+            width: 749px;
+            height: 208px;
+        }
+        </style>
 </head>
 <body>
+    <div class="text-center">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <form id="form1" runat="server">
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style5">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style3">Actor:</td>
-                <td class="auto-style6">
-                    <asp:TextBox ID="txtactor" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style8">Id de Evento:</td>
-                <td class="auto-style4">
-                    <asp:TextBox ID="txtidevento" runat="server" Width="83px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">Horario:</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="txthorario" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style9">&nbsp;</td>
-                <td>
-                    <div class="auto-style13" role="group" aria-label="Opciones">             
-                              <asp:Button ID="btnbuscar" runat="server" OnClick="btnbuscar_Click" Text="Mostrar" Width="91px" />                          
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style2">Nombre de Evento:</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="txtnomevento" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style9">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style2">Descripcion:</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="txtdescripcion" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style9">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Precio VIP:</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="txtVIP" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style9">&nbsp;</td>
-            </tr>
-            <tr>
-                <td>Precio General:</td>
-                <td class="auto-style7">
-                    <asp:TextBox ID="txtGeneral" runat="server"></asp:TextBox>
-                </td>
-                <td class="auto-style9">&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-        <br />
-        <asp:Button ID="btnadd" runat="server" OnClick="btnadd_Click" Text="Agregar" Width="96px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnmodificar" runat="server" OnClick="btnmodificar_Click" Text="Modificar" Width="88px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnborrar" runat="server" Text="Borrar" OnClick="btnborrar_Click" />
-        
-        <br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px">
+        <nav class="navbar navbar-dark bg-dark">                    
+                <nav class="nav nav-pills  nav-justified">                 
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/icons/ulacit_icon.jpg" width="40" height="40" class="d-inline-block align-top" alt="">                     
+                    </a>                  
+                    <a class="nav-item nav-link " href="#">Agregar</a>
+                    <a class="nav-item nav-link " href="#">Modificar</a>
+                    <a class="nav-item nav-link " href="#">Eliminar</a>                                         
+                </nav>
+                    <button class="btn btnCerrarSesion align-content-md-between  btn-lg">Cerrar Sesión</button>
+        </nav>
+        <div class="limiter">
+        <div class="container-login100" style="background-image: url('images/backround.jpg'); background-position: 50% 50%; background-attachment: fixed; background-repeat:no-repeat; background-size: cover;">
+                
+                <br />
+                <br />
+                <br />
+                <br />
+                <table align="center" class="auto-style1">
+                    <tr>
+                        <td class="auto-style7">
+                            <strong>
+                            <asp:Label ID="lblActor" runat="server" ForeColor="White" Text="ACTOR:"></asp:Label>
+                            </strong>
+                            <br />
+                            <asp:TextBox ID="txtactor" runat="server" Width="322px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <strong>
+                            <asp:Label ID="lblHorario" runat="server" ForeColor="White" Text="HORARIO:"></asp:Label>
+                            </strong>
+                            <br />
+                            <asp:TextBox ID="txthorario" runat="server" Width="322px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <strong>
+                            <asp:Label ID="lblNombreEvento" runat="server" ForeColor="White" Text="NOMBRE DEL EVENTO:" Font-Bold="True" Font-Overline="False"></asp:Label>
+                            </strong>
+                            <br />
+                            <asp:TextBox ID="txtnomevento" runat="server" Width="322px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <strong>
+                            <asp:Label ID="lblDescripción" runat="server" ForeColor="White" Text="DESCRIPCIÓN:"></asp:Label>
+                            </strong>
+                            <br />
+                            <asp:TextBox ID="txtdescripcion" runat="server" Width="322px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <strong>
+                            <asp:Label ID="lblPrecioVIP" runat="server" ForeColor="White" Text="PRECIO VIP:"></asp:Label>
+                            </strong>
+                            <br />
+                            <asp:TextBox ID="txtVIP" runat="server" Width="322px"></asp:TextBox>
+                            <br />
+                            <br />
+                            <strong>
+                            <asp:Label ID="lblPrecioGeneral" runat="server" ForeColor="White" Text="PRECIO GENERAL:"></asp:Label>
+                            </strong>
+                            <br />
+                            <asp:TextBox ID="txtGeneral" runat="server"  Width="322px"></asp:TextBox>
+                            </td>
+                        <td class="auto-style2">
+                            <strong>
+                            <asp:Label ID="lblIDdelEveto" runat="server" ForeColor="White" Text="ID DEL EVENTO:  "></asp:Label>
+                            </strong>
+                        </td>
+                        <td class="auto-style3">
+                            <asp:TextBox ID="txtidevento" runat="server"></asp:TextBox>
+                            </td>
+                        <td class="auto-style14">
+                            <asp:Button ID="btnbuscar" runat="server" CssClass="auto-style15" Height="33px" Text="MOSTRAR" Width="108px" BackColor="#0066FF" ForeColor="White" />
+                                <!--OnClick="btnbuscar_Click"/>-->
+                        </td>
+                        <td class="auto-style14">
+                            <asp:Label ID="lblerror2" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style7">
+                            <asp:Label ID="lblerror" runat="server"></asp:Label>
+                            </td>
+                        <td class="auto-style2">
+                            &nbsp;</td>
+                        <td class="auto-style3">
+                            &nbsp;</td>
+                        <td class="auto-style14">
+                            &nbsp;</td>
+                        <td class="auto-style14">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style9">
+                            <asp:Button ID="btnadd" runat="server" CssClass="auto-style15" Height="33px" Text="AGREGAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnadd_Click" />
+                            <asp:Button ID="btnmodificar" runat="server" CssClass="auto-style15" Height="33px" Text="MODIFICAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnmodificar_Click" />
+                            <asp:Button ID="btnborrar" runat="server" CssClass="auto-style15" Height="33px" Text="ELIMINAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnborrar_Click" />
+                        </td>
+                        <td class="auto-style10">
+                        </td>
+                        <td class="auto-style11">
+                        </td>
+                        <td class="auto-style12">
+                        </td>
+                        <td class="auto-style12">
+                            &nbsp;</td>
+                    </tr>
+                </table>
+                <br />
+                </form>
+                <br />
+                <br />
+                <br />
+                <table align="center" class="auto-style16">
+                    <tr>
+                        <td>
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px">
             <Columns>
                 <asp:BoundField DataField="id_evento" HeaderText="id_evento" InsertVisible="False" ReadOnly="True" SortExpression="id_evento" />
                 <asp:BoundField DataField="actor" HeaderText="actor" SortExpression="actor" />
@@ -121,19 +191,39 @@
                 <asp:BoundField DataField="entrada_vip" HeaderText="entrada_vip" SortExpression="entrada_vip" />
             </Columns>
         </asp:GridView>
-     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [evento]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
-        <br />
-     <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="id_graderia" DataSourceID="SqlDataSource2" Width="280px" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
-            <Columns>
-                <asp:BoundField DataField="id_graderia" HeaderText="id_graderia" InsertVisible="False" ReadOnly="True" SortExpression="id_graderia" />
-                <asp:BoundField DataField="estado" HeaderText="estado" SortExpression="estado" />
-                <asp:BoundField DataField="seccion" HeaderText="seccion" SortExpression="seccion" />
-                <asp:BoundField DataField="monto" HeaderText="monto" SortExpression="monto" />
-                <asp:BoundField DataField="id_evento" HeaderText="id_evento" SortExpression="id_evento" />
-                <asp:BoundField DataField="asiento" HeaderText="asiento" SortExpression="asiento" />
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [graderia]"></asp:SqlDataSource>
-    </form>
+                            &nbsp;</td>
+                    </tr>
+        </table>
+                <br />      
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        <div class="card text-center">
+            <div class="card-header">
+            NO COPYRIGHT INFRIGMENT INTENTED
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">UNIVERSIDAD LATINOAMERICANA DE CIENCIA Y TECNOLOGIA</h5>
+                <p class="card-text">DESARROLLO DE APLICACIONES WEB</p>   
+            </div>
+            <div class="card-footer text-muted">
+            San José, Costa Rica
+            </div>
+        </div>
 </body>
 </html>

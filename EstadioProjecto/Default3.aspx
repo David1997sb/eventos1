@@ -47,18 +47,6 @@
             height: 120px;
             width: 13px;
         }
-        .auto-style13 {
-            position: relative;
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            vertical-align: middle;
-            left: 104px;
-            top: 21px;
-            width: 373px;
-            text-align: justify;
-            height: 39px;
-        }
         .auto-style14 {
             text-align: center;
             width: 13px;
@@ -154,18 +142,9 @@
                     </tr>
                     <tr>
                         <td class="auto-style9">
-                            <div class="auto-style13" role="group" aria-label="Opciones">
-                                <button type="button" class="btn btn-primary">AGREGAR
-                                    <!--OnClick="btnadd_Click"-->
-                                 </button>
-                                <button type="button" class="btn btn-primary">MODIFICAR
-                                    <!--OnClick="btnmodificar_Click"-->   
-                                </button>
-                                <button type="button" class="btn btn-primary">BORRAR
-                                    <!--OnClick="btnborrar_Click"-->
-                                </button>
-                            </div>
-                        </td>
+                            <asp:Button ID="btnadd" runat="server" CssClass="auto-style15" Height="33px" Text="AGREGAR" Width="108px" BackColor="#0066FF" ForeColor="White"  />
+                            <asp:Button ID="btnmodificar" runat="server" CssClass="auto-style15" Height="33px" Text="MODIFICAR" Width="108px" BackColor="#0066FF" ForeColor="White"  />
+                            <asp:Button ID="btnborrar" runat="server" CssClass="auto-style15" Height="33px" Text="ELIMINAR" Width="108px" BackColor="#0066FF" ForeColor="White"  />&nbsp;</td>
                         <td class="auto-style10">
                         </td>
                         <td class="auto-style11">
