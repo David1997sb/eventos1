@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="modifyEvent.aspx.cs" Inherits="modifyEvent" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="Default3" %>
 
 <!DOCTYPE html>
 
@@ -8,8 +8,8 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 1017px;
-            height: 695px;
+            width: 858px;
+            height: 554px;
         }
         .auto-style2 {
             text-align: right;
@@ -22,12 +22,12 @@
         }
         .auto-style7 {
             text-align: left;
-            width: 410px;
+            width: 464px;
             font-size: large;
         }
         .auto-style9 {
-            text-align: center;
-            width: 410px;
+            text-align: left;
+            width: 464px;
             font-size: large;
             height: 120px;
         }
@@ -90,42 +90,42 @@
                             <asp:Label ID="lblActor" runat="server" ForeColor="White" Text="ACTOR:"></asp:Label>
                             </strong>
                             <br />
-                            <asp:TextBox ID="txtactor" runat="server" Width="322px"></asp:TextBox>
+                            <asp:TextBox ID="txtactor" runat="server" OnTextChanged="txtactor_TextChanged" Width="322px"></asp:TextBox>
                             <br />
                             <br />
                             <strong>
                             <asp:Label ID="lblHorario" runat="server" ForeColor="White" Text="HORARIO:"></asp:Label>
                             </strong>
                             <br />
-                            <asp:TextBox ID="txthorario" runat="server" Width="322px"></asp:TextBox>
+                            <asp:TextBox ID="txthorario" runat="server" OnTextChanged="txtactor_TextChanged" Width="322px"></asp:TextBox>
                             <br />
                             <br />
                             <strong>
                             <asp:Label ID="lblNombreEvento" runat="server" ForeColor="White" Text="NOMBRE DEL EVENTO:" Font-Bold="True" Font-Overline="False"></asp:Label>
                             </strong>
                             <br />
-                            <asp:TextBox ID="txtnomevento" runat="server" Width="322px"></asp:TextBox>
+                            <asp:TextBox ID="txtnomhorario" runat="server" OnTextChanged="txtactor_TextChanged" Width="322px"></asp:TextBox>
                             <br />
                             <br />
                             <strong>
                             <asp:Label ID="lblDescripción" runat="server" ForeColor="White" Text="DESCRIPCIÓN:"></asp:Label>
                             </strong>
                             <br />
-                            <asp:TextBox ID="txtdescripcion" runat="server" Width="322px"></asp:TextBox>
+                            <asp:TextBox ID="txtdescripcion" runat="server" OnTextChanged="txtactor_TextChanged" Width="322px"></asp:TextBox>
                             <br />
                             <br />
                             <strong>
                             <asp:Label ID="lblPrecioVIP" runat="server" ForeColor="White" Text="PRECIO VIP:"></asp:Label>
                             </strong>
                             <br />
-                            <asp:TextBox ID="txtVIP" runat="server" Width="322px"></asp:TextBox>
+                            <asp:TextBox ID="txtVIP" runat="server" OnTextChanged="txtactor_TextChanged" Width="322px"></asp:TextBox>
                             <br />
                             <br />
                             <strong>
                             <asp:Label ID="lblPrecioGeneral" runat="server" ForeColor="White" Text="PRECIO GENERAL:"></asp:Label>
                             </strong>
                             <br />
-                            <asp:TextBox ID="txtGeneral" runat="server"  Width="322px"></asp:TextBox>
+                            <asp:TextBox ID="txtGeneral" runat="server" OnTextChanged="txtactor_TextChanged" Width="322px"></asp:TextBox>
                             </td>
                         <td class="auto-style2">
                             <strong>
@@ -139,37 +139,18 @@
                             <asp:Button ID="btnbuscar" runat="server" CssClass="auto-style15" Height="33px" Text="MOSTRAR" Width="108px" BackColor="#0066FF" ForeColor="White" />
                                 <!--OnClick="btnbuscar_Click"/>-->
                         </td>
-                        <td class="auto-style14">
-                            <asp:Label ID="lblerror2" runat="server"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style7">
-                            <asp:Label ID="lblerror" runat="server"></asp:Label>
-                            </td>
-                        <td class="auto-style2">
-                            &nbsp;</td>
-                        <td class="auto-style3">
-                            &nbsp;</td>
-                        <td class="auto-style14">
-                            &nbsp;</td>
-                        <td class="auto-style14">
-                            &nbsp;</td>
                     </tr>
                     <tr>
                         <td class="auto-style9">
-                            <asp:Button ID="btnadd" runat="server" CssClass="auto-style15" Height="33px" Text="AGREGAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnadd_Click" />
-                            <asp:Button ID="btnmodificar" runat="server" CssClass="auto-style15" Height="33px" Text="MODIFICAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnmodificar_Click" />
-                            <asp:Button ID="btnborrar" runat="server" CssClass="auto-style15" Height="33px" Text="ELIMINAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnborrar_Click" />
-                        </td>
+                            <asp:Button ID="btnadd" runat="server" CssClass="auto-style15" Height="33px" Text="AGREGAR" Width="108px" BackColor="#0066FF" ForeColor="White"  />
+                            <asp:Button ID="btnmodificar" runat="server" CssClass="auto-style15" Height="33px" Text="MODIFICAR" Width="108px" BackColor="#0066FF" ForeColor="White"  />
+                            <asp:Button ID="btnborrar" runat="server" CssClass="auto-style15" Height="33px" Text="ELIMINAR" Width="108px" BackColor="#0066FF" ForeColor="White"  />&nbsp;</td>
                         <td class="auto-style10">
                         </td>
                         <td class="auto-style11">
                         </td>
                         <td class="auto-style12">
                         </td>
-                        <td class="auto-style12">
-                            &nbsp;</td>
                     </tr>
                 </table>
                 <br />
@@ -179,22 +160,28 @@
                 <br />
                 <table align="center" class="auto-style16">
                     <tr>
-                        <td>
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px">
-            <Columns>
-                <asp:BoundField DataField="id_evento" HeaderText="id_evento" InsertVisible="False" ReadOnly="True" SortExpression="id_evento" />
-                <asp:BoundField DataField="actor" HeaderText="actor" SortExpression="actor" />
-                <asp:BoundField DataField="horario" HeaderText="horario" SortExpression="horario" />
-                <asp:BoundField DataField="nombre_evento" HeaderText="nombre_evento" SortExpression="nombre_evento" />
-                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
-                <asp:BoundField DataField="entrada_general" HeaderText="entrada_general" SortExpression="entrada_general" />
-                <asp:BoundField DataField="entrada_vip" HeaderText="entrada_vip" SortExpression="entrada_vip" />
-            </Columns>
-        </asp:GridView>
-                            &nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
         </table>
                 <br />      
+                <br />
+                <br />
+        <table align="center" class="auto-style16">
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+                <br />
+                <br />
+                <br />
+                <br />                   
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <br />
                 <br />
                 <br />
