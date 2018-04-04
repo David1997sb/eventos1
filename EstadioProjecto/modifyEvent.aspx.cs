@@ -176,4 +176,10 @@ public partial class modifyEvent : System.Web.UI.Page
 
     }
 
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {       
+        Response.Redirect("login.aspx");
+    }
+  
 }

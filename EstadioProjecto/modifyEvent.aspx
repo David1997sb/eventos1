@@ -58,6 +58,10 @@
             width: 749px;
             height: 208px;
         }
+        .auto-style17 {
+            color: #fff;
+            font-size: x-large;
+        }
         </style>
 </head>
 <body>
@@ -69,12 +73,12 @@
                 <nav class="nav nav-pills  nav-justified">                 
                     <a class="navbar-brand" href="#">
                         <img src="/images/icons/ulacit_icon.jpg" width="40" height="40" class="d-inline-block align-top" alt="">                     
-                    </a>                  
-                    <a class="nav-item nav-link " href="#">Agregar</a>
-                    <a class="nav-item nav-link " href="#">Modificar</a>
-                    <a class="nav-item nav-link " href="#">Eliminar</a>                                         
+                    </a>                        
+                        <div class="auto-style17">Administrador</div>                                                        
                 </nav>
-                    <button class="btn btnCerrarSesion align-content-md-between  btn-lg">Cerrar Sesión</button>
+                    <div class="container-login100-form-btn m-t-32">
+                        <asp:Button ID="btnLogout" runat="server" class="login100-form-btn" Text="Cerrar sesión" OnClick="btnLogout_Click"/>
+                    </div>
         </nav>
         <div class="limiter">
         <div class="container-login100" style="background-image: url('images/backround.jpg'); background-position: 50% 50%; background-attachment: fixed; background-repeat:no-repeat; background-size: cover;">
@@ -136,7 +140,7 @@
                             <asp:TextBox ID="txtidevento" runat="server"></asp:TextBox>
                             </td>
                         <td class="auto-style14">
-                            <asp:Button ID="btnbuscar" runat="server" CssClass="auto-style15" Height="33px" Text="MOSTRAR" Width="108px" BackColor="#0066FF" ForeColor="White" />
+                            <asp:Button ID="btnbuscar" runat="server" CssClass="auto-style15" Height="33px" Text="MOSTRAR" Width="108px" BackColor="#0066FF" ForeColor="White" OnClick="btnbuscar_Click" />
                                 <!--OnClick="btnbuscar_Click"/>-->
                         </td>
                         <td class="auto-style14">

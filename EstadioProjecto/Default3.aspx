@@ -58,6 +58,10 @@
             width: 749px;
             height: 208px;
         }
+        .auto-style18 {
+            font-size: x-large;
+            color: #FFFFFF;
+        }
         </style>
 </head>
 <body>
@@ -70,11 +74,11 @@
                     <a class="navbar-brand" href="#">
                         <img src="/images/icons/ulacit_icon.jpg" width="40" height="40" class="d-inline-block align-top" alt="">                     
                     </a>                  
-                    <a class="nav-item nav-link " href="#">Agregar</a>
-                    <a class="nav-item nav-link " href="#">Modificar</a>
-                    <a class="nav-item nav-link " href="#">Eliminar</a>                                         
+                    <div class="auto-style18">Administrador</div>               
                 </nav>
-                    <button class="btn btnCerrarSesion align-content-md-between  btn-lg">Cerrar Sesión</button>
+                    <button class="btn btnCerrarSesion align-content-md-between  btn-lg">Cerrar Sesión
+                        
+                    </button>
         </nav>
         <div class="limiter">
         <div class="container-login100" style="background-image: url('images/backround.jpg'); background-position: 50% 50%; background-attachment: fixed; background-repeat:no-repeat; background-size: cover;">
@@ -164,24 +168,6 @@
                     </tr>
         </table>
                 <br />      
-                <br />
-                <br />
-        <table align="center" class="auto-style16">
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-                <br />
-                <br />
-                <br />
-                <br />                   
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
                 <br />
                 <br />
                 <br />
