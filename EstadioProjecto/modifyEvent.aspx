@@ -64,7 +64,9 @@
                 </td>
                 <td class="auto-style9">&nbsp;</td>
                 <td>
-                    <asp:Button ID="btnbuscar" runat="server" OnClick="btnbuscar_Click" Text="Mostrar" Width="91px" />
+                    <div class="auto-style13" role="group" aria-label="Opciones">             
+                              <asp:Button ID="btnbuscar" runat="server" OnClick="btnbuscar_Click" Text="Mostrar" Width="91px" />                          
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -105,6 +107,7 @@
         <asp:Button ID="btnmodificar" runat="server" OnClick="btnmodificar_Click" Text="Modificar" Width="88px" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnborrar" runat="server" Text="Borrar" OnClick="btnborrar_Click" />
+        
         <br />
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px">
@@ -118,9 +121,9 @@
                 <asp:BoundField DataField="entrada_vip" HeaderText="entrada_vip" SortExpression="entrada_vip" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [evento]"></asp:SqlDataSource>
+     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [evento]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
         <br />
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="id_graderia" DataSourceID="SqlDataSource2" Width="280px">
+     <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="id_graderia" DataSourceID="SqlDataSource2" Width="280px" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="id_graderia" HeaderText="id_graderia" InsertVisible="False" ReadOnly="True" SortExpression="id_graderia" />
                 <asp:BoundField DataField="estado" HeaderText="estado" SortExpression="estado" />
@@ -130,7 +133,7 @@
                 <asp:BoundField DataField="asiento" HeaderText="asiento" SortExpression="asiento" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [graderia]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [graderia]"></asp:SqlDataSource>
     </form>
 </body>
 </html>

@@ -138,4 +138,14 @@ public partial class modifyEvent : System.Web.UI.Page
         Response.Redirect("modifyEvent.aspx");
 
     }
+
+    protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+
+    }
+
+    protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }
