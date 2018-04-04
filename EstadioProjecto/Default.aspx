@@ -1,14 +1,15 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="confirmacion.aspx.cs" Inherits="confirmacion" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="alert alert-light" role="alert">
+        <div class="alert alert-info" role="alert">
             Detalles de la compra</div>
         <div>
     
@@ -29,7 +30,6 @@
         <asp:Label ID="lblas" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
-                <asp:Button ID="btnvolver" runat="server" OnClick="btnvolver_Click" Text="Volver a eventos" Width="158px" />
 
     </div>
     </form>
