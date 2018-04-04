@@ -67,6 +67,10 @@
             <asp:Label ID="lblcantEntra" runat="server" Text="Label"></asp:Label>
             </p>
         <p>
+            Artista:
+            <asp:Label ID="lblactor" runat="server" Text="Label"></asp:Label>
+            </p>
+        <p>
             Zona VIP&nbsp; (A1 , A2,&nbsp; A3) Precio:<asp:Label ID="lblvip" runat="server" Text="Label"></asp:Label>
         </p>
         <p>
@@ -78,8 +82,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </p>
         <p>
-            <asp:Button ID="btnback" runat="server" Text="Volver" Width="126px" Height="24px" />
+            <asp:Button ID="btnback" runat="server" OnClick="btnback_Click" Text="Volver" Width="126px" Height="24px" />
         &nbsp;&nbsp;
+            <asp:Label ID="lblprueba" runat="server" Text="Label"></asp:Label>
         </p>
         <p>
             &nbsp;</p>
