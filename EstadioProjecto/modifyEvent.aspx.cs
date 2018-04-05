@@ -185,8 +185,4 @@ public partial class modifyEvent : System.Web.UI.Page
         Response.Redirect("login.aspx");
     }
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> 86ed08850152e288af49a579dd6939c95235f8b6
 }
