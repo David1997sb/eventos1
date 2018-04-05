@@ -19,7 +19,10 @@ public partial class index : System.Web.UI.Page
         Session["asi"] = "";//variable para guardar los asientos elegidos y mostrarlos en la confirmacion
         
         lblcantEntra.Text = Session["nombre"].ToString(); //despliega cantidad de entradas por comprar
-        con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\estadio.mdf;Integrated Security=True;"; //conexion a la base de datos
+        con.ConnectionString = "Data Source=DESKTOP-U5BLV9M\\SQLEXPRESS;" +
+        "Initial Catalog=stadium_table;" +
+        "User id=dsalas;" +
+        "Password=salasbar97;"; //conexion a la base de datos
 
         //******************************* Despliega precio de entradas VIP***************************************//
         con.Open();

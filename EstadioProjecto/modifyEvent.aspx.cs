@@ -14,7 +14,10 @@ public partial class modifyEvent : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         
-        con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\estadio.mdf;Integrated Security=True;";
+        con.ConnectionString = "Data Source=DESKTOP-U5BLV9M\\SQLEXPRESS;" +
+        "Initial Catalog=stadium_table;" +
+        "User id=dsalas;" +
+        "Password=salasbar97;";
     }
 
     protected void btnadd_Click(object sender, EventArgs e)
@@ -83,7 +86,7 @@ public partial class modifyEvent : System.Web.UI.Page
         if (txtidevento.Text == "")
         {
             lblerror2.Text = "Digite un id de evento valido";
-        }
+        }                            
 
         else
         {
@@ -182,4 +185,8 @@ public partial class modifyEvent : System.Web.UI.Page
         Response.Redirect("login.aspx");
     }
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 86ed08850152e288af49a579dd6939c95235f8b6
 }

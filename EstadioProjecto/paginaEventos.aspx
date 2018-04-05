@@ -33,6 +33,25 @@
                 </div>
            
             </div>
+        <div class="bottom-centered">
+            <p>
+            Cantidad de Entradas
+            <asp:DropDownList ID="DropDownList1" runat="server" Height="28px" Width="116px">
+                <asp:ListItem>1</asp:ListItem>
+                <asp:ListItem>2</asp:ListItem>
+                <asp:ListItem>3</asp:ListItem>
+            </asp:DropDownList>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+        <p>
+            ElegirEvento:&nbsp;&nbsp;
+            <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre_evento" DataValueField="id_evento" Height="16px" Width="140px">
+            </asp:DropDownList>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:stadium_tableConnectionString %>" SelectCommand="SELECT [id_evento], [nombre_evento] FROM [evento]"></asp:SqlDataSource>
+        </p>
+        <asp:Button ID="btncomprar" runat="server" OnClick="btncomprar_Click" Text="Elegir Asientos" Height="28px" Width="1160px" />
+        <br />
+        </div>
         
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -44,13 +63,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-       <div class="bottom-centered">
-        <asp:RadioButton ID="RadioButton1" runat="server" class="bottom-centered" Text="Evento 1"/>
-        <asp:RadioButton ID="RadioButton2" runat="server" class="bottom-centered" Text="Evento 2"/>
-        <asp:RadioButton ID="RadioButton3" runat="server" class="bottom-centered" Text="Evento 3"/>
-         <asp:Button ID="Button1" runat="server" Text="Comprar entradas" OnClick="Button1_Click1"/>
-
-        </div>
+      
     </form>
 </body>
 </html>

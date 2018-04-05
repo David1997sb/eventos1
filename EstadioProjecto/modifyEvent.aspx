@@ -187,7 +187,22 @@
                 <table align="center" class="auto-style16">
                     <tr>
                         <td>
+<<<<<<< HEAD
                            
+=======
+                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id_evento" DataSourceID="SqlDataSource1" Width="520px" CssClass="auto-style17">
+            <Columns>
+                <asp:BoundField DataField="id_evento" HeaderText="id_evento" InsertVisible="False" ReadOnly="True" SortExpression="id_evento" />
+                <asp:BoundField DataField="actor" HeaderText="actor" SortExpression="actor" />
+                <asp:BoundField DataField="horario" HeaderText="horario" SortExpression="horario" />
+                <asp:BoundField DataField="nombre_evento" HeaderText="nombre_evento" SortExpression="nombre_evento" />
+                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                <asp:BoundField DataField="entrada_general" HeaderText="entrada_general" SortExpression="entrada_general" />
+                <asp:BoundField DataField="entrada_vip" HeaderText="entrada_vip" SortExpression="entrada_vip" />
+            </Columns>
+        </asp:GridView>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:stadium_tableConnectionString %>" SelectCommand="SELECT * FROM [evento]"></asp:SqlDataSource>
+>>>>>>> 86ed08850152e288af49a579dd6939c95235f8b6
                             &nbsp;</td>
                     </tr>
         </table>
